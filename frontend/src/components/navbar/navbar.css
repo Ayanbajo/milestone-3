@@ -1,18 +1,19 @@
 .bg-myColor {
-    background-color: #E4D3C0;
+    background-color: #e7dbce;
 }
 .logo {
     position: absolute;
     top: 0;
     left: 0;
-    width: 130px;
+    width: 100px;
+    margin:0;
 }
 
 .navbar-brand{
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Cinzel Decorative', cursive;
     font-weight: bold;
-    color: rgb(91, 89, 89);
+    color: #000;
    margin-left: 35px;
 }
 

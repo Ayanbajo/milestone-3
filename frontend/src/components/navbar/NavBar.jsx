@@ -9,7 +9,7 @@ function TopBar() {
   return (
     <Navbar bg="myColor" expand="lg">
       <Container>
-              <Navbar.Brand href="#home">Travel/Food Blog</Navbar.Brand>
+              <Navbar.Brand href="#home">Food & Travel Blog</Navbar.Brand>
               <img className='logo' src={logo} alt='Plane Logo' />
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         <Navbar.Collapse id="basic-navbar-nav">
