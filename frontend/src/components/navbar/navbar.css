@@ -1,0 +1,35 @@
+.bg-myColor {
+    background-color: #E4D3C0;
+}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+}
+
+.navbar-brand{
+    font-size: 30px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bold;
+    color: rgb(91, 89, 89);
+   margin-left: 35px;
+}
+
+.links {
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #000;
+    text-shadow: 0.5px 0.5px rgb(251, 248, 248);
+    gap: 35px;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+/* .links:hover{
+   
+
+
+} */
+
