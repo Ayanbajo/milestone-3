@@ -1,5 +1,6 @@
 .bg-myColor {
-    background-color: #e7dbce;
+    background-color: rgb(12, 7, 1);
+    border-bottom: 2px solid black;
 }
 .logo {
     position: absolute;
@@ -7,14 +8,16 @@
     left: 0;
     width: 100px;
     margin:0;
+;
 }
 
 .navbar-brand{
     font-size: 25px;
     font-family: 'Cinzel Decorative', cursive;
     font-weight: bold;
-    color: #000;
-   margin-left: 35px;
+    color: rgb(39, 39, 39);
+    text-shadow: 2.5px 2.5px white;
+    margin-left: 35px;
 }
 
 .links {

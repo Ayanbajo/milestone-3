@@ -1,5 +1,5 @@
 import './/header.css'
-import travelSuitcase from '../../images/travelsuitcase.jpg'
+// import travelSuitcase from '../../images/travelsuitcase.jpg'
 
 
 function Header() {
@@ -8,7 +8,7 @@ function Header() {
         <div className="header">
                 <h1 className="header_title"> Food & Travel Blog</h1>
         </div>
-            <img className='header_img' src={travelSuitcase} alt="Travel Packing" />
+            {/* <img className='header_img' src={travelSuitcase} alt="Travel Packing" /> */}
             
         </>
     )

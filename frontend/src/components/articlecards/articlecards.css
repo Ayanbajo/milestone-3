@@ -1,26 +1,8 @@
-.card{
-    display: grid;
-    margin: 50rem 1.5rem;
-    flex-direction: row;
-    max-width: 20rem;
- 
+.cards {
+    flex: 9;
+    display:flex;
+    flex-wrap: wrap;
+    position: absolute;
 }
 
-.card_body {
-    display: flex;
-    margin-top: 3rem;
-    margin: 25px;
-    width: auto;
-}
 
-.card_container {
-    display: inline-flex;
-    flex-direction:row;
-    width: auto;
-    background-size: 75%;
-}
-
-.card-text{
-    font-size: 15px;
-    font-family: 'Poiret One', cursive;
-}

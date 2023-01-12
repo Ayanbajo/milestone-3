@@ -1,18 +1,18 @@
+
 .header_title {
     font-family: 'Elsie', cursive;
     font-size: 70px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 15px;
     position: relative;
     text-shadow: 6px 6px 6px #8A9D8C;
 }
 
-.header_img {
-    position:absolute;
-    top:18%;
-    height: 60vh;
-    width: 100%;
-    object-fit: cover;
+.header{
+    background-image: url('../../images/travelsuitcase.jpg');
+    background-position: center center;
+    background-size: cover; 
+    height:80vh;
     z-index: -1;
-    border-radius: 20%;
 }
+

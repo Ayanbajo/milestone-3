@@ -1,5 +1,5 @@
-import ArticleCards from "../components/articlecards/ArticleCards"
-import Header from "../components/header/Header"
+import ArticleCards from '../../components/articlecards/ArticleCards'
+import Header from '../../components/header/Header'
 import './home.css'
 
 function Home() {
