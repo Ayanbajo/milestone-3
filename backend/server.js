@@ -1,9 +1,9 @@
 const express = require("express");
-require("dotenv").config();
-const PORT = process.env.PORT;
 const app = express();
-
+const { Sequelize } = require('sequelize')
+require("dotenv").config();
 app.use(express.json())
+const PORT = process.env.PORT;
 
 app.get("/", (req, res) => {
   res.send("Hey there!!!");
