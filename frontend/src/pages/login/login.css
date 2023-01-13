@@ -1,0 +1,21 @@
+.form_control {
+    margin: ;
+    padding: 50px;
+    width: 100%;
+}
+
+.form_info {
+    margin:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logInTitle{
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-size: 85px;
+    font-family: 'Merienda', cursive;
+    color:black;
+
+}

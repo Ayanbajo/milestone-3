@@ -1,0 +1,59 @@
+.card {
+    width: 500px;
+    margin-left: 10%;
+    margin-bottom: 5%;
+ 
+    padding: 10px;
+    border:none;
+    display: flex;
+    align-items: flex-start;
+}
+
+.img_1 {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.cardinfo{
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.title{
+    font-family: 'Poiret One', cursive;
+    font-size: 25px;
+    color: #627D78;
+    font-weight: bolder;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.post_date{
+    font-family: 'Poiret One', cursive;
+    font-size: 15px;
+    color: #627D78;
+}
+
+.description{
+    font-family: 'Josefin Slab', serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin:5px;
+}
+
+.card_btn{
+    width:30%;
+    background-color: #679985;
+    border: none;
+    border-radius: 15px;
+    font-family: 'Italiana', serif;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: auto;
+    cursor: pointer;
+}
