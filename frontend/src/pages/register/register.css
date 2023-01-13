@@ -1,0 +1,73 @@
+.register{
+    margin: 10px;
+    height: 500px;
+    padding: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerTitle{
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-size: 85px;
+    font-family: 'Merienda', cursive;
+    color:black;
+}
+
+.welcome{
+    font-size: 25px;
+    color:black;
+    font-weight: bolder;
+}
+
+.signUpForm {
+    margin:20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signUpForm> label {
+    color:black;
+    margin: 10px 0;
+    font-family: 'Poiret One', cursive;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.registerInput {
+    background-color: white;
+    padding:10px;
+    font-family: 'Poiret One', cursive;
+    border: none;
+}
+
+.submitSignUp {
+    background-color: #879789;
+    cursor: pointer;
+    border:none;
+    color:white;
+    border-radius: 10px;
+    padding: 8px;
+    font-family: 'Poiret One', cursive;
+    margin-top: 10px;
+
+}
+
+.signInButton {
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: teal;
+    color:white;
+    font-family: 'Poiret One', cursive;
+    padding: 8px;
+    border:none;
+}
+
+.link {
+    text-decoration: none;
+    color:white;
+}

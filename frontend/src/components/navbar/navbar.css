@@ -1,12 +1,14 @@
 .bg-myColor {
-    background-color: rgb(12, 7, 1);
-    border-bottom: 2px solid black;
+    position: relative;
+    /* background-color: rgb(12, 7, 1); */
+    /* border-bottom: 2px solid black; */
 }
 .logo {
+    display:block;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100px;
+    width: 90px;
     margin:0;
 ;
 }
@@ -17,7 +19,7 @@
     font-weight: bold;
     color: rgb(39, 39, 39);
     text-shadow: 2.5px 2.5px white;
-    margin-left: 35px;
+    /* margin-left: 35px; */
 }
 
 .links {
