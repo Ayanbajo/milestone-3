@@ -4,7 +4,7 @@ function Register() {
   return (
     <div className="register">
       <span className='registerTitle'>Sign Up</span>
-      <span className='welcome'>Become a registered member to our webiste.</span>
+      <span className='welcome'>Become a registered member to our website.</span>
       <form className='signUpForm'>
               <label>Username</label>
               <input className="registerInput" type="text" placeholder='Enter your Username' />

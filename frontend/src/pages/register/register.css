@@ -1,11 +1,16 @@
 .register{
-    margin: 10px;
+    margin: 20px;
     height: 500px;
-    padding: 300px;
+    padding: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('../../images/airplane.jpg');
+    background-size: cover;
+    border-radius: 30%;
+    opacity: 0.7;
+   
 }
 
 .registerTitle{
@@ -13,12 +18,14 @@
     margin-bottom: 20px;
     font-size: 85px;
     font-family: 'Merienda', cursive;
-    color:black;
+    color:rgb(245, 238, 238);
+    text-shadow: 5px 5px 10px black;
 }
 
 .welcome{
     font-size: 25px;
-    color:black;
+    color:rgb(245, 238, 238);
+    text-shadow: 5px 5px 10px black;
     font-weight: bolder;
 }
 
@@ -30,7 +37,7 @@
 }
 
 .signUpForm> label {
-    color:black;
+    color:rgb(245, 238, 238);
     margin: 10px 0;
     font-family: 'Poiret One', cursive;
     font-size: 25px;
