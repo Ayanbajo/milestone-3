@@ -1,29 +1,74 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Users extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate({ Article }) {
-      Users.hasMany(Article, { as: 'articles', foreignKey: 'article_id' })
-    }
+const mongoose = require('mongoose')
+const { Schema } = mongoose
 
-  };
-  Users.init({
-    user_id: DataTypes.INTEGER, primaryKey: true, autoIncrement: true,
-    firstName: DataTypes.STRING, allowNull: false,
-    lastName: DataTypes.STRING, allowNull: false,
-    email: DataTypes.STRING, allowNull: false,
-    passwordDigest: DataTypes.STRING, allowNull: false,
-  }, {
-    sequelize,
-    tableName: 'users',
-    modelName: 'Users',
-  });
-  return Users;
-};
+
+const userSchema = new Schema ({
+    first_name: { type: String, required: true },
+    last_name: { type: String, required: true },
+    email: { type: String },
+    passwordDigest: { type: String }
+
+})
+
+
+const User = mongoose.model('User', userSchema)
+module.exports = User
+
+
+
+
+
+
+
+
+
+
+// 'use strict';
+// const {
+//   Model
+// } = require('sequelize');
+// module.exports = (sequelize, DataTypes) => {
+//   class User extends Model {
+//     static associate({ models }) {
+//     //   Users.hasMany(Article, { as: 'articles', foreignKey: 'article_id' })
+//     }
+
+//   };
+//   User.init({
+//     user_id: {
+//       type: DataTypes.INTEGER,
+//       primaryKey: true,
+//       autoIncrement: true,
+//     },
+//     firstName: {
+//       type: DataTypes.STRING,
+//       allowNull: false
+//     }, 
+//     lastName: {
+//       type: DataTypes.STRING,
+//       allowNull: false
+//     },
+//     email:{
+//       type: DataTypes.STRING,
+//       allowNull: false
+//     }, 
+//     passwordDigest:{
+//       type: DataTypes.STRING,
+//       allowNull: false
+//     },
+//     createdAt:{
+//       type: DataTypes.DATE,
+//       allowNull: false
+//     },
+//     updatedAt:{
+//       type: DataTypes.DATE,
+//       allowNull: false
+//     },
+//   }, {
+//     sequelize,
+//     // freezeTableName: true,
+//     // tableName: 'users',
+//     modelName: 'User',
+//   });
+//   return User;
+// };
