@@ -5,7 +5,8 @@
     text-align: center;
     margin-top: 15px;
     position: relative;
-    text-shadow: 6px 6px 6px #8A9D8C;
+    color: white;
+    text-shadow: 6px 6px 6px #000;
 }
 
 .header{

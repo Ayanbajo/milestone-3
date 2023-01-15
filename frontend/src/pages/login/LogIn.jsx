@@ -6,8 +6,9 @@ function LogIn() {
     return (
         <> 
             <div className='form_control'>
-                <span className='logInTitle'>Log In </span> 
+                
                 <Form className='form_info'>
+                    <span className='logInTitle'>Log In </span> 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                                 <Form.Control type="email" placeholder="Enter email" />
@@ -19,7 +20,7 @@ function LogIn() {
                     </Form.Group>
                     
                     <Button variant="primary" type="submit">
-                        Submit
+                        Login
                     </Button>
                     </Form>
             </div>  
