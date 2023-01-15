@@ -1,24 +1,28 @@
-const user = require('express').Router()
-const db = require('../models')
-const { User } = db
+const express = require('express')
+const user = express.Router()
+const User = require('../models/users.js')
 
-user.post('/', async (req, res) => {
-    const {password, ...rest} = req.body;
-    const user = await User.create({
-        ...rest,
-        passwordDigest: await bcrypt.hash(password, 15)
-    })
-    res.json(user)
+
+user.post('/', (req, res) => {
+  User.create (req.body)
+  .then(foundUser => {
+    res.json(foundUser) 
+  })
+  .catch(err => {
+    console.log(err) 
+    res.render('error404')
+  })
+  
 })
 
-
-user.get('/', async (req, res) => {
-    try {
-        const users = await User.findAll()
-        res.json (users)
-      } catch (error) {
-        res.json(error)
-      }
+user.get('/', (req, res) => {
+  User.find()
+  .then(foundUser => {
+      res.send(foundUser)
+  })
+  .catch(err => { 
+      res.render('error404')
+    })
 })
 
 module.exports = user

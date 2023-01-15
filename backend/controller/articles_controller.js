@@ -1,151 +1,58 @@
-const article = require('express').Router()
-const db = require('../models/')
-const { Article } = db
+const express = require('express')
+const article = express.Router()
+const Article = require('../models/article.js')
 
 
-article.get('/', async (req, res) => {
-  try{ 
-    const foundArticles = await Article.findAll()
-    res.status(500).json (foundArticles)  
-  } catch (error) {
-    res.status(500).json(error)
-  }
-  })   
+article.get('/', (req, res) => {
+      Article.find()
+          .then(foundArticle => {
+              res.send(foundArticle)
+          })
+          .catch(err => { 
+              res.render('error404')
+            })
+  })         
   
-article.get('/:id', async (req, res) => {
-    try {
-        const foundArticle = await Article.findOne({
-            where: { Article_id: req.params.id }
-        })
-        res.status(200).json(foundArticle)
-    } catch (error) {
-        res.status(500).json(error)
-    }
+article.get('/:id', (req, res) => {
+      Article.findById(req.params.id)
+          .then(foundArticle => {
+              res.send(foundArticle)
+              })
+              .catch(err => {
+                  res.render('error404')
+                })
+          })
+  
+article.post('/', (req, res) => {    
+      Article.create (req.body)
+      .then(foundArticle => {
+        res.send(foundArticle) 
+      })
+      .catch(err => {
+        console.log(err) 
+        res.render('error404')
+      })
 })
   
-// article.get('/:article_id', async (req, res) => {
-//   const article_id = Number(req.params.article_id)
-//     if (isNaN(article_id)) {
-//         res.status(404).json({ message: `Invalid id "${article_id}"` })
-//     } else {
-//         const foundArticle = await Article.findOne({
-//             where: { article_id: article_id },
-//         })
-//         if (!foundArticle) {
-//             res.status(404).json({ message: `Can't find "${article_id}"` })
-//         } else {
-//             res.json(foundArticle)
-//         }
-//     }
-//       // Article.findOne(req.params.id)
-//       //     .then(foundArticles => {
-//       //         res.send(foundArticles)
-//       //         })
-//       //         .catch(err => {
-//       //             console.log(err) 
-//       //             res.render('error404')
-//       //           })
-//     })
-  
-article.post('/', async (req, res) => {
-  article.post('/', async (req, res) => {
-    try {
-        const newArticle = await Article.create(req.body)
-        res.status(200).json({
-            message: 'New Article Added',
-            data: newArticle
+article.delete('/:id', (req, res) => {
+      Article.findByIdAndDelete(req.params.id) 
+        .then(deletedArticle => { 
+          res.status(303).redirect('/articles')
         })
-    } catch(err) {
-        res.status(500).json(err)
-    }
+        .catch(err => { 
+          res.render('error404')
+        })
   })
-  // try {
-  //   const foundArticle = await Article.create()
-  //   res.status(200).json (foundArticle)
-  // } catch (error) {
-  //   res.status(500).json(error)
-  // }
+  
+article.put('/:id', (req, res) => {
+    Article.findByIdAndUpdate(req.params.id, req.body) 
+      .then(updatedArticle => { 
+        res.redirect(`/articles/${req.params.id}`) 
+      })
+      .catch(err => {
+        res.render('error404')
+      })
   })
 
-article.put('/:id', async (req, res) => {
-    try {
-        const updatedArticle = await Article.update(req.body, {
-            where: {
-                article_id: req.params.id
-            }
-        })
-        res.status(200).json({
-            message: `Update Successful`
-        })
-    } catch(err) {
-        res.status(500).json(err)
-    }
-})
-// article.put('/:article_id', async (req, res) => {
-//     let article_id = Number(req.params.article_id)
-//     if (isNaN(article_id)) {
-//         res.status(404).json({ message: `Invalid id "${article_id}"` })
-//     } else {
-//         const foundArticle = await Article.findOne({
-//             where: { articleId: article_id},
-//         })
-//         if (!foundArticle) {
-//             res.status(404).json({ message: `Can't find id "${article_id}"` })
-//         } else {
-//             Object.assign(foundArticle, req.body)
-//             await foundArticle.save()
-//             res.json(foundArticle)
-//         }
-//     }
-    
-//   })
-    
-
-article.delete('/:id', async (req, res) => {
-  try {
-      const deletedArticle = await Article.destroy({
-          where: {
-              article_id: req.params.id
-          }
-      })
-      res.status(200).json({
-          message: `Delete Successful`
-      })
-  } catch(err) {
-      res.status(500).json(err)
-  }
-})
-
-
-// article.delete('/:article_id', async (req, res) => {
-//     const article_id = Number(req.params.article_id)
-  
-//     if (isNaN(article_id)) {
-//         res.status(404).json({ message: `Invalid id "${article_id}"` })
-//     }  else {
-//         const foundArticle = await Article.findOne({
-//             where: { article_id: article_id }
-//         })
-//         if (!foundArticle) {
-//             res.status(404).json({ message: `Can't find  id "${article_id}" for place with id "${article_id}"` })
-//         } else {
-//             await foundArticle.destroy()
-//             res.json(foundArticle)
-//         }
-//     }
-    // article.delete('/:id', async (req, res) => {
-    //   try {
-    //     const foundArticle = await Article.findByIdAndDlete()
-    //     res.status(200).json (foundArticle)
-    //   } catch (error) {
-    //     res.status(500).json(error)
-    //   }
-    // })
-  
-
-
-  
   // export
 module.exports = article
-
-

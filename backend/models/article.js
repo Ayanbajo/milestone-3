@@ -1,47 +1,22 @@
-'use strict';
-const { Model } = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Article extends Model {
-    static associate({ models }) {
-    //   Article.belongsTo(Users, { foreignKey: 'user_id', as: 'users' })
-    }
+const mongoose = require('mongoose')
+const { Schema } = mongoose
 
-  };
 
-  Article.init({
-    article_id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    title: { 
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    author: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    description:{
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    date: {
-      type: DataTypes.DATE,
-      allowNull: false
-    },
-    content: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    image: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
-  }, {
-    sequelize,
-    tablename: 'articles',
-    modelName: 'Article',
-  });
-  return Article;
-};
+const articleSchema = new Schema ({
+    title: { type: String, required: true },
+    image: { type: String, default: 'http://placekitten.com/350/500' },
+    date: { type: Number },
+    description: { type: String },
+    author: { type: String },
+    content: {type: String, required: true },
+
+})
+
+
+const Article = mongoose.model('Article', articleSchema)
+module.exports = Article
+
+
+
+
+
