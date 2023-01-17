@@ -8,27 +8,21 @@ import { useParams, useNavigate } from 'react-router-dom';
 function SingleArticle() {
   let { id } = useParams();
   const navigate = useNavigate();
-  console.log('THIS IS OUR id!~!! beore use effect', id);
 
   const [post, setPost] = useState({});
 
   const getData = async () => {
-    console.log('THis is the id!!!', id)
-    console.log("We got clicked", id);
+    // console.log("We got clicked", id);
     const data = await fetch("http://localhost:3001/article/" + id);
-    console.log("DATA inital from backed", data);
+    // console.log("Data from backend:", data);
 
     const cleanData = await data.json();
-    console.log("STUFF FROM BACKNED!!", cleanData);
     setPost(cleanData);
   };
-  console.log("Post", post);
-
+  // console.log("Post", post);
   useEffect(() => {
     getData();
   }, []);
-
-
 
   return (
     <>
