@@ -3,7 +3,7 @@
     /* background-color: rgb(12, 7, 1); */
     /* border-bottom: 2px solid black; */
 }
-.logo {
+/* .logo {
     display:block;
     position: absolute;
     top: 0;
@@ -11,15 +11,14 @@
     width: 90px;
     margin:0;
 ;
-}
+} */
 
 .navbar-brand{
-    font-size: 25px;
+    font-size: 35px;
     font-family: 'Cinzel Decorative', cursive;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: rgb(39, 39, 39);
-    text-shadow: 2.5px 2.5px white;
-    /* margin-left: 35px; */
+    text-shadow: 1.5px 1.5px white;
 }
 
 .links {
@@ -28,7 +27,7 @@
     font-weight: bolder;
     color: #000;
     text-shadow: 0.5px 0.5px rgb(251, 248, 248);
-    gap: 35px;
+    gap: 25px;
     margin-left: 5%;
     cursor: pointer;
 }
