@@ -14,11 +14,11 @@
 } */
 
 .navbar-brand{
-    font-size: 35px;
+    font-size: 25px;
     font-family: 'Cinzel Decorative', cursive;
     /* font-weight: bold; */
     color: rgb(39, 39, 39);
-    text-shadow: 1.5px 1.5px white;
+    text-shadow: 5px 5px 5px rgb(142, 155, 147);
 }
 
 .links {

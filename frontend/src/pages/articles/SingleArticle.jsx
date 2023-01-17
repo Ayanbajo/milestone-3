@@ -1,29 +1,49 @@
 
 import './/singleArticle.css'
-import sunset from '../../images/sunset.jpg'
-import Carousel from 'react-bootstrap/Carousel';
+// import sunset from '../../images/sunset.jpg'
+// import Carousel from 'react-bootstrap/Carousel';
+import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function SingleArticle() {
+  let { id } = useParams();
+  const navigate = useNavigate();
+  console.log('THIS IS OUR id!~!! beore use effect', id);
+
+  const [post, setPost] = useState({});
+
+  const getData = async () => {
+    console.log('THis is the id!!!', id)
+    console.log("We got clicked", id);
+    const data = await fetch("http://localhost:3001/article/" + id);
+    console.log("DATA inital from backed", data);
+
+    const cleanData = await data.json();
+    console.log("STUFF FROM BACKNED!!", cleanData);
+    setPost(cleanData);
+  };
+  console.log("Post", post);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+
+
   return (
     <>
     <div className="article">
-      <span className='title2'>A Trip to Remember</span>
-        <img className='article_img' src={sunset} alt='Sunset traveler' />
+        <span className='title2'>{post.title}</span>
+        <img className='article_img' src={post.image} />  
         <div className="articleinfo">
-            <span className='post_date2'><em> Date: August 20</em></span>
-          <span className='author'>Post By: James Harry</span>
-          <p className='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <span className='post_date2'><em> {post.date}</em></span>
+          <span className='author'>{post.author}</span>
+          <p className='description'>{post.description} </p>
             <hr />
         </div>
         
         <p className='content'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero. Suscipit sequi rem ea? Aut quisquam consequuntur atque. Id, dolor perspiciatis expedita sunt quas voluptate!orem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero. Suscipit sequi rem ea? Aut quisquam consequuntur atque. Id, dolor perspiciatis expedita sunt quas voluptate!orem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero. Suscipit sequi rem ea? Aut quisquam consequuntur atque. Id, dolor perspiciatis expedita sunt quas voluptate!orem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero.
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero. Suscipit sequi rem ea? Aut quisquam consequuntur atque. Id, dolor perspiciatis expedita sunt quas voluptate!orem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero. Suscipit sequi rem ea? Aut quisquam consequuntur atque. Id, dolor perspiciatis expedita sunt quas voluptate!orem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero. Suscipit sequi rem ea? Aut quisquam consequuntur atque. Id, dolor perspiciatis expedita sunt quas voluptate!orem ipsum dolor sit amet consectetur adipisicing elit. Fugit, cupiditate quis tempora nulla nihil libero.
+        {post.content}
         </p>
     </div>
       </>

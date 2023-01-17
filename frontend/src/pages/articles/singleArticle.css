@@ -34,7 +34,7 @@
 }
 
  .author {
-    font-size:20px;
+    font-size:15px;
     display: block;
     font-family: 'Raleway Dots', cursive;
     font-weight: bolder;
@@ -44,8 +44,8 @@
  .description {
     display: block;
     text-align: center;
-    font-size:20px;
-    margin-top: 30px;
+    font-size:15px;
+    margin-top: 20px;
     font-family: 'Raleway Dots', cursive;
     font-weight: bolder;
 

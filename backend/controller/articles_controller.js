@@ -13,6 +13,16 @@ article.get('/', (req, res) => {
     })
 })
 
+//GET POST
+// article.get("/:id", async (req, res) => {
+//   try {
+//     const post = await Article.findById(req.params.id);
+//     res.status(200).json(post)
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 article.get('/:id', (req, res) => {
   Article.findById(req.params.id)
     .then(foundArticle => {

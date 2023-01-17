@@ -9,14 +9,14 @@ import SingleArticle from './pages/articles/SingleArticle'
 import AddArticle from './pages/articles/AddArticle'
 
 
-function App() {
+function App(post) {
   return (
     <>
       <TopBar />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/article" element={<SingleArticle />} />
+          <Route path="/article/:id" element={<SingleArticle />} />
           <Route path="/addarticle" element={<AddArticle />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/login" element={<LogIn />} />
