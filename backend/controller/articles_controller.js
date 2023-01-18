@@ -27,6 +27,7 @@ article.get('/:id', (req, res) => {
   Article.findById(req.params.id)
     .then(foundArticle => {
       res.send(foundArticle)
+
     })
     .catch(err => {
       res.render('error404')
@@ -49,7 +50,7 @@ article.post('/', (req, res) => {
 article.delete('/:id', (req, res) => {
   Article.findByIdAndDelete(req.params.id)
     .then(deletedArticle => {
-      res.status(303).redirect('/articles')
+      res.status(303).redirect('/article')
     })
     .catch(err => {
       res.render('Delete unsuccessful')
@@ -57,11 +58,11 @@ article.delete('/:id', (req, res) => {
 })
 
 
-
+//EDIT/UPDATE ARTICLE
 article.put('/:id', (req, res) => {
   Article.findByIdAndUpdate(req.params.id, req.body)
     .then(updatedArticle => {
-      res.redirect(`/articles/${req.params.id}`)
+      res.redirect(`/article/${req.params.id}`)
     })
     .catch(err => {
       res.render('error404')

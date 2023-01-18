@@ -4,6 +4,7 @@ import './/singleArticle.css'
 // import Carousel from 'react-bootstrap/Carousel';
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import {Link} from 'react-router-dom'
 
 function SingleArticle() {
   let { id } = useParams();
@@ -24,6 +25,24 @@ function SingleArticle() {
     getData();
   }, []);
 
+
+  //DELETE
+  const deleteArticle = async () => {
+    console.log('Hello from delete click')
+    const requestOptions = {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    };
+
+    const data = await fetch(`http://localhost:3001/article/${id}`, requestOptions);
+    console.log("Data!!! from delte", data);
+    navigate("/");
+  };
+
+
+
+
+
   return (
     <>
     <div className="article">
@@ -39,6 +58,10 @@ function SingleArticle() {
         <p className='content'>
         {post.content}
         </p>
+
+        <Link className="single" to={`/article/${post._id}/edit`}><button className="card_btn">Edit</button></Link>
+
+        <button className="single" onClick={deleteArticle}>Delete</button>
     </div>
       </>
 )

@@ -10,9 +10,8 @@ function Home() {
   const getData = async () => {
     // console.log("We got clicked");
     const data = await fetch("http://localhost:3001/article");
-    // console.log("DATA inital from backed", data);
     const cleanData = await data.json();
-    // // console.log("STUFF FROM BACKNED!!", cleanData);
+
     setPosts(cleanData);
   };
   console.log("Posts", posts);
@@ -20,16 +19,6 @@ function Home() {
   useEffect(() => {
     getData();
   }, []);
-
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const data = await fetch("http://localhost:3001/api/article")
-  //     console.log(data)
-  //     setPosts(data)
-  //   }
-  //   getData()
-  // }, [])
-
 
   return (
     <>

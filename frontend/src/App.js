@@ -7,6 +7,7 @@ import Register from './pages/register/Register';
 import LogIn from './pages/login/LogIn'
 import SingleArticle from './pages/articles/SingleArticle'
 import AddArticle from './pages/articles/AddArticle'
+import EditArticle from './components/editarticle/EditArticle';
 
 
 function App(post) {
@@ -20,6 +21,7 @@ function App(post) {
           <Route path="/addarticle" element={<AddArticle />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/login" element={<LogIn />} />
+          <Route path="/article/:id/edit" element={<EditArticle />} />
         </Routes>
       </Router>
 
