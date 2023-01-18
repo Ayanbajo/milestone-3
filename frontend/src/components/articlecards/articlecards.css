@@ -2,7 +2,6 @@
     flex: 9;
     display:flex;
     flex-wrap: wrap;
-    position: absolute;
+    flex-direction: row;
+    justify-content: center;
 }
-
-

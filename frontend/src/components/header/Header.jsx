@@ -1,4 +1,5 @@
 import './/header.css'
+import React from 'react';
 // import travelSuitcase from '../../images/travelsuitcase.jpg'
 
 
@@ -6,12 +7,10 @@ function Header() {
     return (
         <>
         <div className="header">
-                <h1 className="header_title"> Food & Travel Blog</h1>
+                <h2 className="header_title"> Share the love, share the experience...</h2>
         </div>
-            {/* <img className='header_img' src={travelSuitcase} alt="Travel Packing" /> */}
-            
         </>
     )
 }
 
-export default Header
+export default Header;

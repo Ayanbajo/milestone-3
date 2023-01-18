@@ -1,23 +1,44 @@
-const router = require("express").Router();
-const User = require("models/users.js")
+const express = require('express')
+const user = express.Router()
+const User = require('../models/users.js')
+const bcrypt = require('bcrypt')
 
-// router.post("/signup", async (req, res) => {
-//     try {
-//         const newUser = new User ({
-//             first_name: req.body.first_name,
-//             last_name: req.body.last_name,
-//             email: req.body.email,
-//             passwordDigest: req.body.passwordDigest
+user.post('/', async (req, res) => {
+    console.log('IN HERE')
+    let user = await User.findOne({
+        where: { email: req.body.email }
+    })
+    console.log(user)
+    if (!user || !await bcrypt.compare(req.body.password, user.passwordDigest)) {
+        res.status(404).json({ 
+            message: `Could not find a user with the provided username and password` 
+        })
+    } else {
+        res.json({ user })
+    }
+})
+
+module.exports = user;
+
+// user.post('/', async (req, res) => {
+//     let user = await User.findOne({
+//         where: { email: req.body.email }
+//     })
+//     console.log(user)
+//     if (!user || !await bcrypt.compare(req.body.password, user.passwordDigest)) {
+//         res.status(404).json({ 
+//             message: `Could not find a user with the provided username and password` 
 //         })
-//         const user = await newUser.save();
-//         res.status(200).json("User was created")
-//         }catch(err){
-//             res.status(500).json(err);
-
-
+//     } else {
+//         res.json({ user })
 //     }
-   
 // })
 
+// module.exports = user
 
-// module.exports = router
+
+// const router = require('express').Router()
+// const db = require("../models")
+// const bcrypt = require('bcrypt')
+
+// const { User } = db
