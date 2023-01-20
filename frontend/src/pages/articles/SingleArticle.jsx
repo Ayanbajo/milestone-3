@@ -58,7 +58,7 @@ function SingleArticle() {
 
         <Link className="single" to={`/article/${post._id}/edit`}><button className="card_btn">Edit</button></Link>
 
-        <button className="single" onClick={deleteArticle}>Delete</button>
+        <button className="card_btn" onClick={deleteArticle}>Delete</button>
     </div>
       </>
 )
