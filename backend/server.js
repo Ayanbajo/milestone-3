@@ -26,12 +26,5 @@ app.use("/article", postRoute)
 app.use("/users", userRoute)
 app.use("/auth", authRoute);
 
-app.use(express.static(path.join(__dirname,"front-end-react", 'build')));
-
-
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, "front-end-react", 'build', 'index.html'));
-});
-
 
 app.listen(PORT, console.log(`App is listening on http://localhost:${PORT}`));
