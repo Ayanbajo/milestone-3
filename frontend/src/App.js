@@ -1,3 +1,4 @@
+import React from 'react';
 import CurrentUserProvider from './contexts/CurrentUser';
 import './App.css';
 import TopBar from './components/navbar/NavBar';

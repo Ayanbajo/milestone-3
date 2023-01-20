@@ -1,4 +1,5 @@
- import ArticleCards from '../../components/articlecards/ArticleCards'
+import React from 'react';
+import ArticleCards from '../../components/articlecards/ArticleCards'
 import Header from '../../components/header/Header'
 import './home.css'
 import { useState, useEffect } from 'react'
