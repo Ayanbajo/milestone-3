@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> tara
 import { useNavigate } from 'react-router-dom';
 import './/register.css'
 import { useState} from 'react';
@@ -67,6 +70,10 @@ function Register() {
         
 
         <button onClick={reload} type="submit" className='submitSignUp'>Submit</button>
+<<<<<<< HEAD
+=======
+              {/* <button className='signInButton'>Log In</button> */}
+>>>>>>> tara
               
           </form>
    </div>

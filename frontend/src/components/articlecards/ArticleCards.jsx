@@ -7,7 +7,7 @@ import './/articlecards.css'
 const ArticleCards = ({posts}) => {
     return (
         <div className='cards'>
-            {posts.map((p, index) => (
+            {posts.map((p,index) => (
                 <Card key={index} post={p} />
             ))}
         </div>

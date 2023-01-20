@@ -1,17 +1,8 @@
 .bg-myColor {
-    position: relative;
-    /* background-color: rgb(12, 7, 1); */
-    /* border-bottom: 2px solid black; */
+    position: relativefixed;
+    border-bottom: 1px solid black;
+
 }
-/* .logo {
-    display:block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90px;
-    margin:0;
-;
-} */
 
 .navbar-brand{
     font-size: 25px;
@@ -27,7 +18,7 @@
     font-weight: bolder;
     color: #000;
     text-shadow: 0.5px 0.5px rgb(251, 248, 248);
-    gap: 25px;
+    gap: 15px;
     margin-left: 5%;
     cursor: pointer;
 }

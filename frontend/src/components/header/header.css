@@ -11,7 +11,7 @@
     background-image: url('../../images/travelsuitcase.jpg');
     background-position: center center;
     background-size: cover;
-    opacity: 0.;
+    opacity: 0.9;
     padding: 40px 20px; 
     height:80vh;
     z-index: -1;

@@ -1,4 +1,11 @@
 .cards {
+    /* background-image: url('../../images/passport.png');
+    background-repeat: no-repeat;
+    background-position:top;
+    width: 50%;
+    margin: auto;
+    background-size: 20%;
+    margin-bottom: 15%; */
     flex: 9;
     display:flex;
     flex-wrap: wrap;

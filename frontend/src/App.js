@@ -5,14 +5,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from '../src/pages/home/Home';
 import Register from './pages/register/Register';
 import LogIn from './pages/login/LogIn'
-import SingleArticle from './pages/article/SingleArticle'
-import AddArticle from './pages/article/AddArticle.jsx'
-import EditArticle from './components/editarticle/EditArticle'
+import SingleArticle from './pages/articles/SingleArticle'
+import AddArticle from './pages/articles/AddArticle'
+import EditArticle from './components/editarticle/EditArticle';
 
 
 function App(post) {
   return (
-    <>
+    <CurrentUserProvider>
       <TopBar />
       <Router>
         <Routes>
@@ -21,7 +21,7 @@ function App(post) {
           <Route path="/addarticle" element={<AddArticle />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/login" element={<LogIn />} />
-          <Route path="/article/:id/edit" element={<EditArticle/>} />
+          <Route path="/article/:id/edit" element={<EditArticle />} />
         </Routes>
       </Router>
 
@@ -38,7 +38,7 @@ function App(post) {
           <br />
         </h4>
       </footer>
-    </>
+    </CurrentUserProvider>
   );
 }
 

@@ -15,13 +15,13 @@
     font-family: 'Poiret One', cursive;
     color: #000;
     font-weight: bold;
-    margin:10px;
-    padding: 100px;
+    margin:100px;
+    padding: 200px;
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: rgb(255, 255, 255, 0.6);
-    border-radius: 20%;
+    /* border-radius: 20%; */
 }
 
 

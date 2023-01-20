@@ -9,7 +9,7 @@ function Card({post}) {
           <div className="cardinfo">
               <span className='title'>{post.title}</span>
               <span className='post_date'><em>{post.date}</em></span>
-        <span className='author'>{post.author}</span>
+        <span className='author'>Written by: {post.author}</span>
               <p className='description'>{post.description} </p>
               <hr />
           </div>

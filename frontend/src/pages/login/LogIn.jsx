@@ -9,7 +9,7 @@ function LogIn() {
 
     const navigate = useNavigate()
     
-    const  setCurrentUser  = useContext( CurrentUser )
+    const { setCurrentUser } = useContext( CurrentUser )
 
     const [information, setInformation] = useState({
         email: '',

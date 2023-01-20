@@ -1,6 +1,7 @@
 .card {
     width: 385px;
     margin: 20px 30px 20px 30px;
+<<<<<<< HEAD
     padding: 10px;
     border:none;
     background-color: transparent;
@@ -10,6 +11,11 @@
     border:none;
     display: flex;
     align-items: flex-start; */
+=======
+    padding: 10px;
+    border:none;
+    background-color: transparent;
+>>>>>>> tara
 }
 
 .img_1 {
@@ -47,13 +53,20 @@
     font-size: 16px;
     line-height: 26px;
     margin:5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
 .card_btn{
     width:40%;
     background-color: #679985;
+    color: white;
     border: none;
     border-radius: 15px;
+    font-weight: bolder;
     padding: 15px;
     margin: auto;
     cursor: pointer;

@@ -1,3 +1,9 @@
 .home{
-    display: inline-block;
+    display: flex;
 }
+
+footer {
+    background: #AFB09F;
+    padding: 25px 0;
+    text-align: center;
+  } 

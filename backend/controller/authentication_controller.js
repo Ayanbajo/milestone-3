@@ -20,34 +20,35 @@ const jwt = require('jsonwebtoken')
 
 // module.exports = user;
 
+
+//Login in current user
 router.post('/', async (req, res) => {
-    console.log('IN HERE')
+    console.log("in authentication")
+
     let user = await User.findOne({
-     email: req.body.email
+        email: req.body.email
     })
     console.log(user)
-    if (!user || !await bcrypt.compare(req.body.password, user.passwordDigest)) {
-        res.status(404).json({ 
-            message: `Could not find a user with the provided username and password` 
+
+    if (!user || !await bcrypt.compare(req.body.password, user.password)) {
+        res.status(404).json({
+            message: `Could not find a user with the provided username and password`
         })
     } else {
-        const result = await jwt.encode(process.env.JWT_SECRET, {id: user._id })
-        res.json({ user:user, token: result.value })
+        console.log("create token attempt")
+        const result = await jwt.encode(process.env.JWT_SECRET, { id: user._id })
+        res.json({ user: user, token: result.value })
     }
 })
 
+
 router.get('/profile', async (req, res) => {
     try {
-
         const [authenticationMethod, token] = req.headers.authorization.split(' ')
-
         if (authenticationMethod == 'Bearer') {
-
             const result = await jwt.decode(process.env.JWT_SECRET, token)
-
             const { id } = result.value
             console.log("value of id:", id)
-            
             let user = await User.findOne({
                 _id: id
 
@@ -65,34 +66,3 @@ router.get('/profile', async (req, res) => {
 module.exports = router
 
 
-
-
-
-
-
-
-
-
-
-// user.post('/', async (req, res) => {
-//     let user = await User.findOne({
-//         where: { email: req.body.email }
-//     })
-//     console.log(user)
-//     if (!user || !await bcrypt.compare(req.body.password, user.passwordDigest)) {
-//         res.status(404).json({ 
-//             message: `Could not find a user with the provided username and password` 
-//         })
-//     } else {
-//         res.json({ user })
-//     }
-// })
-
-// module.exports = user
-
-
-// const router = require('express').Router()
-// const db = require("../models")
-// const bcrypt = require('bcrypt')
-
-// const { User } = db

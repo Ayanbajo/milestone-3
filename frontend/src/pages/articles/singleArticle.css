@@ -1,0 +1,67 @@
+.article {
+    padding: 25px;
+}
+
+.title2 {
+    display: flex;
+    margin: 20px 40px 0 50px;
+    font-family: 'Inspiration', cursive;
+    font-size: 65px;
+    font-weight: 200;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    border-top: 1px solid black;
+}
+
+.article_img{
+    width:100%;
+    padding: 20px 40px 20px 50px;
+    border-radius: 0 20% 0 20%;
+}
+
+.article_info {
+    display: block;
+    justify-content: center;
+}
+
+.post_date2 {
+    font-size:20px;
+    /* margin-left: 25%; */
+    font-family: 'Raleway Dots', cursive;
+    font-weight: bolder;
+
+}
+
+ .author {
+    font-size:15px;
+    display: block;
+    font-family: 'Raleway Dots', cursive;
+    font-weight: bolder;
+
+ }
+
+ .description {
+    display: block;
+    font-size:15px;
+    margin-top: 20px;
+    font-family: 'Raleway Dots', cursive;
+    color:#2F4858;
+    font-weight: bolder;
+
+ }
+
+.content {
+    line-height: 35px;
+    text-align: justify;
+    margin:8%;
+    font-family: 'Raleway Dots', cursive;
+    font-weight: bolder;
+}
+
+
+.content::first-letter{
+    font-size: 75px;
+    float:left; 
+    
+}
