@@ -43,10 +43,10 @@
 
  .description {
     display: block;
-    text-align: center;
     font-size:15px;
     margin-top: 20px;
     font-family: 'Raleway Dots', cursive;
+    color:#2F4858;
     font-weight: bolder;
 
  }

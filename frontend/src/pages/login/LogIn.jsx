@@ -1,15 +1,15 @@
 import './/login.css'
 // import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import  CurrentUser  from "./../../contexts/CurrentUser"
+import { CurrentUser }  from "../../contexts/CurrentUser"
 import { useContext, useState } from "react"
 import { useNavigate } from "react-router"
 
 function LogIn() {
 
-    const navigate= useNavigate()
-
-    const  setCurrentUser  = useContext(CurrentUser)
+    const navigate = useNavigate()
+    
+    const { setCurrentUser } = useContext( CurrentUser )
 
     const [information, setInformation] = useState({
         email: '',
@@ -19,8 +19,9 @@ function LogIn() {
     const [errorMessage, setErrorMessage] = useState(null)
 
     async function handleSubmit(e) {
+  
         e.preventDefault()
-        const response = await fetch(`http://localhost:3001/auth/`, {
+        const response = await fetch(`http://localhost:3001/auth`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,8 +32,11 @@ function LogIn() {
         const data = await response.json()
 
         if (response.status === 200) {
+    
             setCurrentUser(data.user)
-            navigate.push(`/`)
+            console.log(data.token)
+            localStorage.setItem('token', data.token)
+            navigate(`/`)
         } else {
             setErrorMessage(data.message)
         }
@@ -54,6 +58,7 @@ function LogIn() {
                 <Form className='form_info' onSubmit = {handleSubmit}>
                     <span className='logInTitle'>Log In </span> 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
+
                         <Form.Label>Email address</Form.Label>
                                 <Form.Control type="email" required value={information.email} onChange = {e => setInformation({ ...information, email: e.target.value})}
                             name="email"placeholder="Enter email" />

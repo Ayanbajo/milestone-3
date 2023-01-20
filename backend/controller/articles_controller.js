@@ -3,6 +3,7 @@ const article = express.Router()
 const Article = require('../models/article.js')
 
 
+//GET ALL ARTICLES
 article.get('/', (req, res) => {
   Article.find()
     .then(foundArticle => {

@@ -12,8 +12,8 @@
 .form_container {
     display:flex;
     flex-direction: column;
-    margin: 20px;
-    padding: 50px;
+    margin: 50px;
+    padding: 30px;
     background-color: oldlace;
     border-radius: 15px;
     border: 3px solid #D5CABD;
@@ -26,7 +26,8 @@
     padding:15px;
     font-family: 'Poiret One', cursive;
     border-radius: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
+    width: 100%;
    
 }
 
@@ -37,3 +38,15 @@ label {
     font-family: 'Poiret One', cursive;
 }
 
+.card_btn2{
+    width:40%;
+    font-family: 'Poiret One', cursive;
+    font-weight: 600;
+    color:white;
+    background-color: #679985;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px 0 0 70px;
+    cursor: pointer;
+}

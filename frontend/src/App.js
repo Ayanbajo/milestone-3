@@ -1,4 +1,4 @@
-
+import CurrentUserProvider from './contexts/CurrentUser';
 import './App.css';
 import TopBar from './components/navbar/NavBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
@@ -12,7 +12,7 @@ import EditArticle from './components/editarticle/EditArticle';
 
 function App(post) {
   return (
-    <>
+    <CurrentUserProvider>
       <TopBar />
       <Router>
         <Routes>
@@ -38,7 +38,7 @@ function App(post) {
           <br />
         </h4>
       </footer>
-    </>
+    </CurrentUserProvider>
   );
 }
 

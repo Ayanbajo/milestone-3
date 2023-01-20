@@ -54,10 +54,10 @@ function EditArticle() {
      
     return (
         <div>
-            <div className="">
-                <h2>Edit Article</h2>
-                <form>
-                    <label>Article Title: </label>
+            <div className="edit_form">
+                <h2>Make your article changes below:</h2>
+                <form className='form_container'>
+                    <label className='form_label'>Article Title: </label>
                     <input 
                         type="text"
                         id="title"
@@ -66,7 +66,7 @@ function EditArticle() {
                         onChange={(e)=> {setTitle(e.target.value)}}
                         required
                     />
-                    <label>Image URL: </label>
+                    <label className='form_label'>Image URL: </label>
                     <input 
                         type="url"
                         id="image"
@@ -74,7 +74,7 @@ function EditArticle() {
                         defaultValue={post.image}
                         onChange={(e)=> {setImage(e.target.value)}}
                     />
-                    <label>Date Published</label>
+                    <label className='form_label'>Date Published</label>
                     <input 
                         type="number"
                         id="date"
@@ -82,7 +82,7 @@ function EditArticle() {
                         defaultValue={post.date}
                         onChange={(e)=> {setDate(e.target.value)}}
                     />
-                    <label>Description: </label>
+                    <label className='form_label'>Description: </label>
                     <input 
                         type="type"
                         id="duration"
@@ -90,7 +90,7 @@ function EditArticle() {
                         defaultValue={post.description}
                         onChange={(e)=> {setDescription(e.target.value)}}
                     />
-                    <label>Author: </label>
+                    <label className='form_label'>Author: </label>
                     <input 
                         type="text"
                         id="genre"
@@ -98,7 +98,7 @@ function EditArticle() {
                         defaultValue={post.author}
                         onChange={(e)=> {setAuthor(e.target.value)}}
                     />
-                    <label>Content: </label>
+                    <label className='form_label'>Content: </label>
                     <textarea
                         id="description"
                         name="description" 
@@ -107,7 +107,7 @@ function EditArticle() {
                         required
                     />
                     <button 
-                        className="btn"
+                        className="card_btn card_btn3"
                         onClick={articleEdit}>
                         Update
                     </button>

@@ -113,7 +113,7 @@ function AddArticle() {
                         placeholder='Enter content here'
                     />
                     <div>
-                    <button className="card_btn"
+                    <button className="card_btn2"
                         onClick={handleSave}
                         type="submit"
                         // disabled={!title || !image || !date || !author || !content ||description}  
@@ -123,7 +123,7 @@ function AddArticle() {
                     </div>
 
                     <div>
-                      <button className="card_btn"
+                      <button className="card_btn2"
                         onClick={reload}
                         type="cancel"
                     > Cancel </button>

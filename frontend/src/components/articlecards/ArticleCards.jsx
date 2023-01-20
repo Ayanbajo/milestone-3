@@ -6,8 +6,8 @@ import './/articlecards.css'
 const ArticleCards = ({posts}) => {
     return (
         <div className='cards'>
-            {posts.map((p) => (
-                <Card post={p} />
+            {posts.map((p,index) => (
+                <Card key={index} post={p} />
             ))}
         </div>
    )         
