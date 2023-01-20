@@ -8,6 +8,7 @@ import LogIn from './pages/login/LogIn'
 import SingleArticle from './pages/articles/SingleArticle'
 import AddArticle from './pages/articles/AddArticle'
 import EditArticle from './components/editarticle/EditArticle';
+import CurrentUserProvider from './contexts/CurrentUser';
 
 
 function App(post) {

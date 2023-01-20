@@ -2,7 +2,7 @@
 import './/singleArticle.css'
 // import sunset from '../../images/sunset.jpg'
 // import Carousel from 'react-bootstrap/Carousel';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {Link} from 'react-router-dom'
 
@@ -38,9 +38,6 @@ function SingleArticle() {
     console.log("Data!!! from delte", data);
     navigate("/");
   };
-
-
-
 
 
   return (

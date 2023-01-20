@@ -18,9 +18,6 @@ user.post('/', async (req, res) => {
     
 })
 
-
-
-//FIND USER BY ID
 user.get("/:id", async (req, res) => {
 
   try {
