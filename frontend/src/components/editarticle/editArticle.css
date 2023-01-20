@@ -1,0 +1,15 @@
+h2 {
+    display:block;
+    font-size: 25px;
+    font-family: 'Merienda', cursive;
+    color:rgb(51, 50, 50);
+    text-shadow: 5px 5px 10px black;
+    margin: 15px 20px 15px 20px
+}
+
+.card_btn3{
+    margin-top: 30px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+
+}

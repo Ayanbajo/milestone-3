@@ -1,13 +1,16 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
-footer{
+footer {
+  background-color: #b5b6a9;
+  color:white;
+  padding: 25px 0;
   text-align: center;
-  background-color: rgba(34, 24, 28);
-  color: azure;
-  padding: 20px;
-  border-top: 5px solid white;
-  border-radius: 10%;
+  font-family: 'Elsie', cursive
+} 
 
+a {
+  text-decoration: none;
+  color: white;
 }

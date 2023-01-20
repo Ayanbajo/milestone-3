@@ -1,18 +1,32 @@
- // import ArticleCards from '../../components/articlecards/ArticleCards'
-// import Header from '../../components/header/Header'
+ import ArticleCards from '../../components/articlecards/ArticleCards'
+import Header from '../../components/header/Header'
 import './home.css'
-// import Register from '../register/Register'
-// import Article from '../article/Article'
-import Gallery from '../gallery/Gallery'
+import { useState, useEffect } from 'react'
+
 
 function Home() {
+  const [posts, setPosts] = useState([]);
+
+  const getData = async () => {
+    // console.log("We got clicked");
+    const data = await fetch("http://localhost:3001/article");
+    const cleanData = await data.json();
+
+    setPosts(cleanData);
+  };
+  console.log("Posts", posts);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <>
-    {/* <Header /> */}
+    <Header />
       <div className="home">
-        <Gallery/>
-        {/* <Article/> */}
+        <ArticleCards posts={posts} />
       </div>
+
     </>
   )
 }
