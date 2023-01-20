@@ -11,7 +11,10 @@
     color: rgb(39, 39, 39);
     text-shadow: 5px 5px 5px rgb(142, 155, 147);
 }
-
+.user_name {
+    font-size: 25px;
+    color: rgba(36, 116, 36, 0.384);
+}
 .links {
     font-family: 'Poiret One', cursive;
     font-size: 20px;
@@ -23,9 +26,11 @@
     cursor: pointer;
 }
 
-/* .links:hover{
-   
+.log_out {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-weight: bolder;
 
-
-} */
+}
 

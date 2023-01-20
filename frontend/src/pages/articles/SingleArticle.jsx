@@ -28,14 +28,14 @@ function SingleArticle() {
 
   //DELETE
   const deleteArticle = async () => {
-    console.log('Hello from delete click')
+    // console.log('Hello from delete click')
     const requestOptions = {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
     };
 
     const data = await fetch(`http://localhost:3001/article/${id}`, requestOptions);
-    console.log("Data!!! from delte", data);
+    // console.log("Data!!! from delte", data);
     navigate("/");
   };
 
@@ -61,7 +61,7 @@ function SingleArticle() {
 
         <Link className="single" to={`/article/${post._id}/edit`}><button className="card_btn">Edit</button></Link>
 
-        <button className="single" onClick={deleteArticle}>Delete</button>
+        <button className="card_btn card_btn4" onClick={deleteArticle}>Delete</button>
     </div>
       </>
 )
