@@ -1,5 +1,4 @@
 import './/header.css'
-// import travelSuitcase from '../../images/travelsuitcase.jpg'
 
 
 function Header() {
