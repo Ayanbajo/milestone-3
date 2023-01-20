@@ -4,7 +4,8 @@
   "description": "Travel & Share Blog is a website where users can share their travel experiences. Visit our website to read about the wonderful experiences of others. If you sign up to be a member of our website, you will be allowed to post, edit or delete your own travel experiences as articles for others to read! \r To see our website in action, please visit: \r To sign up, please click the sign up tab!",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
