@@ -1,0 +1,19 @@
+{
+  "name": "milestone-3",
+  "version": "1.0.0",
+  "description": "Travel & Share Blog is a website where users can share their travel experiences. Visit our website to read about the wonderful experiences of others. If you sign up to be a member of our website, you will be allowed to post, edit or delete your own travel experiences as articles for others to read! \r To see our website in action, please visit: \r To sign up, please click the sign up tab!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayanbajo/milestone-3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ayanbajo/milestone-3/issues"
+  },
+  "homepage": "https://github.com/Ayanbajo/milestone-3#readme"
+}
