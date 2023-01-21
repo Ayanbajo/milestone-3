@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require('mongoose')
 require("dotenv").config();
 const PORT = process.env.PORT;
+const path = require('path')
 const app = express();
 const cors = require('cors')
 
@@ -15,6 +16,12 @@ app.use(express.json())
 app.get("/", (req, res) => {
   res.send("Hey there!!!");
 });
+
+// serve static front end in production mode
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, 'public', 'build')));
+}
+
 
 mongoose.set('strictQuery', true);
 
