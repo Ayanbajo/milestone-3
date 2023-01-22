@@ -4,8 +4,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function AddArticle() {
-    // const [post, setPost] = useState([]);
-    // let { id } = useParams();
     const navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [image, setImage] = useState("");
@@ -100,7 +98,6 @@ function AddArticle() {
                     <button className="card_btn"
                         onClick={handleSave}
                         type="submit"
-                        // disabled={!title || !image || !date || !author || !content ||description}  
                     > Submit
 
                         </button>

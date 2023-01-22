@@ -1,6 +1,6 @@
 import './/header.css'
 import React from 'react';
-// import travelSuitcase from '../../images/travelsuitcase.jpg'
+
 
 
 function Header() {
