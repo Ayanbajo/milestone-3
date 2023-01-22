@@ -13,13 +13,7 @@ function Register() {
   const reload = async () => {
     navigate("/")
     const data =  fetch("http://localhost:3001/users", requestOptions)
-// const cleanData = data.json();
-//   console.log("Did you save?", cleanData);
   }
-
-  // const handleSave = async () => {
-  //     console.log("Is this working?")
-  //   navigate("/");
     
     const requestOptions = {
       method: "POST",
@@ -66,7 +60,6 @@ function Register() {
         
 
         <button onClick={reload} type="submit" className='submitSignUp'>Submit</button>
-              {/* <button className='signInButton'>Log In</button> */}
               
           </form>
    </div>

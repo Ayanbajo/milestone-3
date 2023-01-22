@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function AddArticle() {
-    // const [post, setPost] = useState([]);
-    // let { id } = useParams();
     const navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [image, setImage] = useState("");
@@ -21,23 +19,6 @@ function AddArticle() {
         console.log("Is this working?")
         navigate("/");
 
-    
-    
-  
-        //   const cleanData = await data.json();
-        //   console.log("STUFF FROM BACKNED!!", cleanData);
-        //   setPost(cleanData);
-        //   setTitle(cleanData.title);
-        //   setImage(cleanData.image);
-        //   setDescription(cleanData.description);
-        //   setAuthor(cleanData.author);
-        //   setContent(cleanData.content);
-        // };
-  
-        // useEffect(() => {
-        //     getData();
-        // }, []);
-  
     const requestOptions = {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -116,7 +97,6 @@ function AddArticle() {
                     <button className="card_btn2"
                         onClick={handleSave}
                         type="submit"
-                        // disabled={!title || !image || !date || !author || !content ||description}  
                     > Submit
 
                         </button>
