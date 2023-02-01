@@ -14,7 +14,7 @@ function EditArticle() {
   const [date, setDate] = useState("");
 
   const getData = async () => {
-      const data = await fetch(`http://localhost:3001/article/${id}`); 
+      const data = await fetch(`/article/${id}`); 
     console.log("DATA inital from backed", data);
 
     const cleanData = await data.json();
@@ -45,7 +45,7 @@ function EditArticle() {
       }),
     };
 
-      const data = await fetch(`http://localhost:3001/article/${id}`, requestOptions).then(
+      const data = await fetch(`/article/${id}`, requestOptions).then(
           navigate("/")
       );
     

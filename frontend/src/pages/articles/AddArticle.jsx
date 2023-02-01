@@ -32,7 +32,7 @@ function AddArticle() {
                 }),
             };
   
-        const data = await fetch("http://localhost:3001/article", requestOptions)
+        const data = await fetch("/article", requestOptions)
         const cleanData = await data.json();
             console.log("Did you save?", cleanData);
         };

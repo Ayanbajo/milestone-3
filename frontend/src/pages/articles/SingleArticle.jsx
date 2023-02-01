@@ -11,7 +11,7 @@ function SingleArticle() {
   const [post, setPost] = useState({});
 
   const getData = async () => {
-    const data = await fetch("http://localhost:3001/article/" + id);
+    const data = await fetch("/article/" + id);
     // console.log("Data from backend:", data);
 
     const cleanData = await data.json();
@@ -31,7 +31,7 @@ function SingleArticle() {
       headers: { "Content-Type": "application/json" },
     };
 
-    const data = await fetch(`http://localhost:3001/article/${id}`, requestOptions);
+    const data = await fetch(`/article/${id}`, requestOptions);
     // console.log("Data!!! from delte", data);
     navigate("/");
   };
