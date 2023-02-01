@@ -12,7 +12,7 @@ const authRoute = require("./controller/authentication_controller.js")
 
 
 app.use(cors())
-// app.use(express.json())
+app.use(express.json())
 app.use(express.static(path.join(__dirname, "../frontend", 'build')));
 
 // app.get("/", (req, res) => {

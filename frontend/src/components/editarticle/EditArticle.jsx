@@ -31,7 +31,7 @@ function EditArticle() {
     getData();
   }, []);
 
-  const articleEdit = async () => {
+    const articleEdit = async () => {
     const requestOptions = {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -43,7 +43,7 @@ function EditArticle() {
         author: author,
         content: content
       }),
-    };
+  };
 
       const data = await fetch(`/article/${id}`, requestOptions).then(
           navigate("/")
