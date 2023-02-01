@@ -1,5 +1,5 @@
 import './/editArticle.css'
-import React, { useState, useEffect } from 'react'
+import React,{ useState, useEffect } from 'react'
 import {useParams, useNavigate} from 'react-router-dom'
 
 function EditArticle() {
@@ -32,7 +32,7 @@ function EditArticle() {
   }, []);
 
     const articleEdit = async () => {
-    const requestOptions = {
+     const requestOptions = {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -43,11 +43,11 @@ function EditArticle() {
         author: author,
         content: content
       }),
-  };
+    };
 
       const data = await fetch(`/article/${id}`, requestOptions).then(
-          navigate("/")
-      );
+        navigate("/")
+    );
     
     console.log("Data!!! from edit", data);
   };
