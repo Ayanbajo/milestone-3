@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "03d1d225afcfb08d0465",
+    "revision": "fc34a7f5b991968f50cb",
     "url": "/static/css/main.a8946195.chunk.css"
   },
   {
-    "revision": "03d1d225afcfb08d0465",
-    "url": "/static/js/main.03d1d225.chunk.js"
+    "revision": "fc34a7f5b991968f50cb",
+    "url": "/static/js/main.fc34a7f5.chunk.js"
   },
   {
     "revision": "51b078aa646a10602aea",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/static/media/maldives.57bcd5e4.jpg"
   },
   {
-    "revision": "2f5b86839ddf5fb74fe49793f06fc05d",
+    "revision": "4d0edcec027f14510c3b11596ce2ae03",
     "url": "/index.html"
   }
 ];

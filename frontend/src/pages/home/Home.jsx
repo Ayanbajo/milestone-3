@@ -10,7 +10,7 @@ function Home() {
 
   const getData = async () => {
     // console.log("We got clicked");
-    const data = await fetch("http://localhost:3001/article");
+    const data = await fetch("/article");
     const cleanData = await data.json();
 
     setPosts(cleanData);

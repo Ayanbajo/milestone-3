@@ -13,14 +13,14 @@ const authRoute = require("./controller/authentication_controller.js")
 
 app.use(cors())
 // app.use(express.json())
-app.use(express.static(path.join(__dirname, "frontend", 'build')));
+app.use(express.static(path.join(__dirname, "../frontend", 'build')));
 
 // app.get("/", (req, res) => {
 //   res.send("Hey there!!!");
 // });
 
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "frontend", 'build', 'index.html'));
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "../frontend", 'build', 'index.html'));
 });
 
 mongoose.set('strictQuery', true);
