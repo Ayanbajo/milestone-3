@@ -1,4 +1,5 @@
- import ArticleCards from '../../components/articlecards/ArticleCards'
+import React from 'react';
+import ArticleCards from '../../components/articlecards/ArticleCards'
 import Header from '../../components/header/Header'
 import './home.css'
 import { useState, useEffect } from 'react'
@@ -9,7 +10,7 @@ function Home() {
 
   const getData = async () => {
     // console.log("We got clicked");
-    const data = await fetch("http://localhost:3001/article");
+    const data = await fetch("/article");
     const cleanData = await data.json();
 
     setPosts(cleanData);

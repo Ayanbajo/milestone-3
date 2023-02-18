@@ -17,6 +17,14 @@ Bcrypt
 JSON Web Token
 CORS
 
+## Environment Variable (Backend)
+PORT=3001
+MONGO_URI=mongodb+srv://<USERNAME>:<PASSWORD>@cluster0.ql8nouj.mongodb.net/<DATABASE NAME>
+JWT_SECRET=qiweuxhoiuehqmie
+
+
+## Environment Variable (Frontend)
+PORT=3000
 
 ## Issues
 - Styling Issues: site is not fully responsize. There are width, image and button styling errors.

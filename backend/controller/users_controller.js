@@ -30,8 +30,5 @@ user.get("/:id", async (req, res) => {
   }
 });
 
-//DELETE USER???
-
-
 
 module.exports = user

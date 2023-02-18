@@ -1,5 +1,5 @@
 import './/editArticle.css'
-import { useState, useEffect } from 'react'
+import React,{ useState, useEffect } from 'react'
 import {useParams, useNavigate} from 'react-router-dom'
 
 function EditArticle() {
@@ -14,7 +14,7 @@ function EditArticle() {
   const [date, setDate] = useState("");
 
   const getData = async () => {
-      const data = await fetch(`http://localhost:3001/article/${id}`); 
+      const data = await fetch(`/article/${id}`); 
     console.log("DATA inital from backed", data);
 
     const cleanData = await data.json();
@@ -31,8 +31,8 @@ function EditArticle() {
     getData();
   }, []);
 
-  const articleEdit = async () => {
-    const requestOptions = {
+    const articleEdit = async () => {
+     const requestOptions = {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -45,9 +45,9 @@ function EditArticle() {
       }),
     };
 
-      const data = await fetch(`http://localhost:3001/article/${id}`, requestOptions).then(
-          navigate("/")
-      );
+      const data = await fetch(`/article/${id}`, requestOptions).then(
+        navigate("/")
+    );
     
     console.log("Data!!! from edit", data);
   };
@@ -116,40 +116,5 @@ function EditArticle() {
         </div>
     );
 };
-
-//     return (
-//         <>
-//                 <div className='edit_title'>
-//                     <h2 className='edit_intro'>Share your experience below. </h2>
-//                 </div>
-//                 <div className='form_container'>
-//                     <label>Title</label>
-//                 <input
-//                     defaultdefaultValue={ }
-//                     className="editInput"
-//                     type="text"
-//                     placeholder='Enter article title' />
-                    
-//                 <label>Image</label>
-//                         <input className="editInput" type="url" placeholder='Enter url'/>
-//                     <label>Date</label>
-//                         <input className="editInput" type="text" placeholder='Post Date' />
-//                     <label>Author</label>
-//                         <input className="editInput" type="text" placeholder='Enter name' />
-//                     <label>Description</label>
-//                         <input className="editInput" type="text" placeholder='Describe your content' />
-//                     <label>Content</label>
-//                         <textarea
-//                             className="editInput"
-//                             type="text"
-//                             placeholder='Enter content here'
-//                         />
-//                 <button onClick={articleEdit} className="card_btn">Update</button>
-                    
-//                 </div>
-//         </>
-//         )
-// }
-
 
 export default EditArticle

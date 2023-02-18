@@ -1,5 +1,5 @@
 import './/card.css'
-// import sunset from '../../images/sunset.jpg'
+import React from 'react';
 import {Link} from 'react-router-dom'
 
 function Card({post}) {

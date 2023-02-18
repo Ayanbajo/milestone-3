@@ -1,8 +1,6 @@
 
 import './/singleArticle.css'
-// import sunset from '../../images/sunset.jpg'
-// import Carousel from 'react-bootstrap/Carousel';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {Link} from 'react-router-dom'
 
@@ -13,8 +11,7 @@ function SingleArticle() {
   const [post, setPost] = useState({});
 
   const getData = async () => {
-    // console.log("We got clicked", id);
-    const data = await fetch("http://localhost:3001/article/" + id);
+    const data = await fetch("/article/" + id);
     // console.log("Data from backend:", data);
 
     const cleanData = await data.json();
@@ -34,14 +31,10 @@ function SingleArticle() {
       headers: { "Content-Type": "application/json" },
     };
 
-    const data = await fetch(`http://localhost:3001/article/${id}`, requestOptions);
+    const data = await fetch(`/article/${id}`, requestOptions);
     // console.log("Data!!! from delte", data);
     navigate("/");
   };
-
-
-
-
 
   return (
     <>

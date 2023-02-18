@@ -1,6 +1,6 @@
 import Card from "../articlecards/Card"
 import './/articlecards.css'
-
+import React from 'react';
 
 
 const ArticleCards = ({posts}) => {
