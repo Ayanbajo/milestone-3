@@ -1,13 +1,12 @@
 .bg-myColor {
     position: relativefixed;
     border-bottom: 1px solid black;
-
 }
 
 .navbar-brand{
-    font-size: 25px;
+    font-size: 32px;
     font-family: 'Cinzel Decorative', cursive;
-    /* font-weight: bold; */
+    font-weight: 600;
     color: rgb(39, 39, 39);
     text-shadow: 5px 5px 5px rgb(142, 155, 147);
 }
@@ -18,7 +17,7 @@
 .links {
     font-family: 'Poiret One', cursive;
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: 800;
     color: #000;
     text-shadow: 0.5px 0.5px rgb(251, 248, 248);
     gap: 15px;
