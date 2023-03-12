@@ -1,21 +1,41 @@
 .form_control {
-    margin: ;
-    padding: 50px;
-    width: 100%;
+    margin: 20px;
+    height: 500px;
+    padding: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../images/maldives.jpg');
+    background-size: cover;
+    box-shadow: 20px 20px 50px grey;
 }
 
 .form_info {
-    margin:20px;
+    font-family: 'Poiret One', cursive;
+    color: #000;
+    font-weight: bold;
+    margin:100px;
+    padding: 200px;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.6);
+    /* border-radius: 20%; */
 }
 
 
 .logInTitle{
     margin-top:20px;
     margin-bottom: 20px;
-    font-size: 85px;
+    font-size: 80px;
+    text-shadow: 5px 5px 10px rgb(148, 194, 221);
     font-family: 'Merienda', cursive;
-    color:black;
+    text-align: center;
 
+}
+
+.btn-primary {
+    font-size: 20px;
+    font-weight: bold;
 }

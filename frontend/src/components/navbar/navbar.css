@@ -1,41 +1,36 @@
 .bg-myColor {
-    position: relative;
-    /* background-color: rgb(12, 7, 1); */
-    /* border-bottom: 2px solid black; */
-}
-.logo {
-    display:block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90px;
-    margin:0;
-;
+    position: relativefixed;
+    border-bottom: 1px solid black;
+
 }
 
 .navbar-brand{
     font-size: 25px;
     font-family: 'Cinzel Decorative', cursive;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: rgb(39, 39, 39);
-    text-shadow: 2.5px 2.5px white;
-    /* margin-left: 35px; */
+    text-shadow: 5px 5px 5px rgb(142, 155, 147);
 }
-
+.user_name {
+    font-size: 25px;
+    color: rgba(36, 116, 36, 0.384);
+}
 .links {
     font-family: 'Poiret One', cursive;
     font-size: 20px;
     font-weight: bolder;
     color: #000;
     text-shadow: 0.5px 0.5px rgb(251, 248, 248);
-    gap: 35px;
+    gap: 15px;
     margin-left: 5%;
     cursor: pointer;
 }
 
-/* .links:hover{
-   
+.log_out {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-weight: bolder;
 
-
-} */
+}
 
