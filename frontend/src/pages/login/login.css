@@ -1,7 +1,7 @@
 .form_control {
-    margin: 20px;
-    height: 500px;
-    padding: 400px;
+    margin: 15px;
+    height: 300px;
+    padding: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,15 +13,14 @@
 
 .form_info {
     font-family: 'Poiret One', cursive;
-    color: #000;
+    color: rgba(0, 0, 0, 1);
     font-weight: bold;
-    margin:100px;
-    padding: 200px;
+    margin:10px 80px 10px 80px;
+    padding: 50px 150px 50px 150px;
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: rgb(255, 255, 255, 0.6);
-    /* border-radius: 20%; */
 }
 
 
@@ -36,6 +35,38 @@
 }
 
 .btn-primary {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+    .form_control {
+        height: auto;
+        padding: 52px;
+    }
+
+    .form_info {
+        margin: 50px;
+        padding: 100px;
+    }
+
+    .logInTitle {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .form_control {
+        margin: 5px;
+    }
+
+    .form_info {
+        margin: 20px;
+        padding: 50px;
+    }
+
+    .logInTitle {
+        font-size: 30px;
+    }
 }
