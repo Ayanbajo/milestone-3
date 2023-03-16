@@ -12,12 +12,11 @@ function SingleArticle() {
 
   const getData = async () => {
     const data = await fetch("/article/" + id);
-    // console.log("Data from backend:", data);
 
     const cleanData = await data.json();
     setPost(cleanData);
   };
-  // console.log("Post", post);
+  
   useEffect(() => {
     getData();
   }, []);
